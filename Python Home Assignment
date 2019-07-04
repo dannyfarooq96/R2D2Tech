@@ -2,22 +2,16 @@ from requests import get
 url = 'http://www.imdb.com/search/title?release_date=2017&sort=num_votes,desc&page=1'
 response = get(url)
 print(response.text[:500])
-<!DOCTYPE html><
-htmlxmlns:og="http://ogp.me/ns#"xmlns:fb="http://www.facebook.com/2008/fbml">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="apple-itunes-app" content="app-id=342792525, app-argument=imdb:///?src=mdot">
-<script type="text/javascript">
-var ue_t0=window.ue_t0||+new Date();</script>
-<script type="text/javascript">
-var ue_mid = "A1EVAM02EL8SFB";
-
+import sys
+import requests
+from bs4 import BeautifulSoup
+import time
+from colorama import init,Fore
+init(convert=True)
 movie_containers = html_soup.find_all('div', class_ = 'lister-item mode-advanced')
 print(type(movie_containers))
 print(len(movie_containers))
 <class 'bs4.element.ResultSet'>
-
 
 <div class="lister-item mode-advanced">
 <div class="lister-top-right">
